@@ -1,11 +1,11 @@
 {
-  "name": "create-vue",
+  "name": "create-own-project",
   "version": "3.11.2",
   "description": "🛠️ The recommended way to start a Vite-powered Vue project",
   "type": "module",
   "packageManager": "pnpm@9.12.3",
   "bin": {
-    "create-vue": "outfile.cjs"
+    "create-own-project": "outfile.cjs"
   },
   "files": [
     "locales",

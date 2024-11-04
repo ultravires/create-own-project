@@ -25,6 +25,12 @@
   "needsPinia": {
     "message": "是否引入 Pinia 用于状态管理？"
   },
+  "needsAxios": {
+    "message": "是否引入 Axios 用于接口请求？"
+  },
+  "needsTailwindcss": {
+    "message": "是否引入 Tailwindcss 用于 UI 样式编写？"
+  },
   "needsVitest": {
     "message": "是否引入 Vitest 用于单元测试？"
   },

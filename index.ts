@@ -139,6 +139,8 @@ async function init() {
     needsJsx?: boolean
     needsRouter?: boolean
     needsPinia?: boolean
+    needsAxios?: boolean
+    needsTailwindcss?: boolean
     needsVitest?: boolean
     needsE2eTesting?: false | 'cypress' | 'nightwatch' | 'playwright'
     needsEslint?: boolean
@@ -234,6 +236,22 @@ async function init() {
           inactive: language.defaultToggleOptions.inactive,
         },
         {
+          name: 'needsAxios',
+          type: () => (isFeatureFlagsUsed ? null : 'toggle'),
+          message: language.needsAxios.message,
+          initial: false,
+          active: language.defaultToggleOptions.active,
+          inactive: language.defaultToggleOptions.inactive,
+        },
+        {
+          name: 'needsTailwindcss',
+          type: () => (isFeatureFlagsUsed ? null : 'toggle'),
+          message: language.needsTailwindcss.message,
+          initial: false,
+          active: language.defaultToggleOptions.active,
+          inactive: language.defaultToggleOptions.inactive,
+        },
+        {
           name: 'needsVitest',
           type: () => (isFeatureFlagsUsed ? null : 'toggle'),
           message: language.needsVitest.message,
@@ -323,6 +341,8 @@ async function init() {
     needsTypeScript = argv.ts || argv.typescript,
     needsRouter = argv.router || argv['vue-router'],
     needsPinia = argv.pinia,
+    needsAxios = argv.axios,
+    needsTailwindcss = argv.tailwindcss,
     needsVitest = argv.vitest || argv.tests,
     needsEslint = argv.eslint || argv['eslint-with-prettier'],
     needsPrettier = argv['eslint-with-prettier'],
@@ -371,6 +391,12 @@ async function init() {
   }
   if (needsPinia) {
     render('config/pinia')
+  }
+  if (needsAxios) {
+    render('config/axios')
+  }
+  if (needsTailwindcss) {
+    render('config/tailwindcss')
   }
   if (needsVitest) {
     render('config/vitest')
