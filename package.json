@@ -1,5 +1,5 @@
 {
-  "name": "create-own-project",
+  "name": "create-vue-project",
   "version": "3.11.2",
   "description": "🛠️ The recommended way to start a Vite-powered Vue project",
   "type": "module",
